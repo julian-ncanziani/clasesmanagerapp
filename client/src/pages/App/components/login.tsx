@@ -1,11 +1,8 @@
-import React from 'react';
+import './login.css';
+import { Link } from 'react-router-dom';
 
-import './App.css';
-
-function App() {
-  return (<>
-    <div id='navBar'></div>
-    
+function Login(){
+    return(<>
     <div id='loginForm'>
       <h2>Welcome</h2>
       <span>
@@ -15,9 +12,9 @@ function App() {
         <input type="password" name="inputName" id="userName" placeholder='Password'/>
       </span>
       <button >Login</button>
+      <Link to={'/create'}>Sino tenes usuario podes crear uno desde aqui</Link>
     </div>
-    </>
-  );
+    </>);
 };
 
-export default App;
+export default Login;

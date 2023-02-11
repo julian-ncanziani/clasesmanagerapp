@@ -24,7 +24,8 @@ __decorate([
 __decorate([
     (0, sequelize_typescript_1.Column)({
         type: sequelize_typescript_1.DataType.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     }),
     __metadata("design:type", String)
 ], User.prototype, "name", void 0);
@@ -36,7 +37,8 @@ __decorate([
 ], User.prototype, "password", void 0);
 __decorate([
     (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.STRING
+        type: sequelize_typescript_1.DataType.STRING,
+        unique: true
     }),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);

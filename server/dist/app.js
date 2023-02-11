@@ -7,12 +7,18 @@ const body_parser_1 = require("body-parser");
 const express_1 = __importDefault(require("express"));
 const index_1 = __importDefault(require("./routes/index"));
 const config_1 = __importDefault(require("./db/config"));
+const cors = require('cors');
 const app = (0, express_1.default)();
 //asd
 app.use((0, body_parser_1.json)());
 app.use((0, body_parser_1.urlencoded)({ extended: true }));
+app.use(function (_req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.use(index_1.default);
-config_1.default.sync({ force: false }).then(() => {
+config_1.default.sync({ force: true }).then(() => {
     app.listen(3001);
     console.log('Server running on port 3001');
 }).catch((err) => {

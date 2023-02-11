@@ -15,7 +15,8 @@ export class User extends Model{
 
     @Column({
         type: DataType.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     })
     name!: string;
 
@@ -25,7 +26,8 @@ export class User extends Model{
     password!: string;
 
     @Column({
-        type: DataType.STRING
+        type: DataType.STRING,
+        unique: true
     })
     email!: string;   
 };
