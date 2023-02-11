@@ -1,35 +1,12 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import { Student } from '../models/student';
-
+import { StudentController } from '../controllers/studentController';
 const studentRouter = Router();
 
-studentRouter.post('', async (req, res)=>{
-    let { name, address, UserId } = req.body;
-    try {
-        const newStudent = await Student.create({name, address, UserId});
-        res.status(200).json(newStudent);
-    } catch (error) {
-        res.status(400).json(error);
-    }
-});
+studentRouter.post('', StudentController.postStudent);
 
-studentRouter.get('/all',async (_req, res)=>{
-    try {
-        const students = await Student.findAll();
-        res.status(200).json(students);
-    } catch (error) {
-        res.status(400).json(error);
-    }
-});
+studentRouter.get('', StudentController.getAllStudents);
 
-studentRouter.get('',async (req, res)=>{
-    let {UserId} = req.body;
-    try {
-        const students = await Student.findAll({where: {UserId}});
-        res.status(200).json(students);
-    } catch (error) {
-        res.status(400).json(error);
-    }
-});
+studentRouter.get('/:id', StudentController.getStudentsByUserId);
 
 export default studentRouter;

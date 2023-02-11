@@ -1,26 +1,11 @@
-import { Router } from 'express';
-import { User } from '../models/user';
+import { Request, Response, Router } from 'express';
+import {User} from '../models/user';
+import { UserController } from '../controllers/userController';
 
 const userRouter = Router();
 
-userRouter.get('', async (_req, res)=>{
-    
-   try {
-    const users = await User.findAll();
-    res.status(200).json(users);
-   } catch (error) {
-    res.status(400).json(error);
-   }
-});
+userRouter.get('', UserController.getAllUsers);
 
-userRouter.post('', async (req, res)=>{
-    let { name, email} = req.body;
-    try {
-        const newUser = await User.create({name, email}); 
-        res.status(200).json({msg: 'User Created', ...newUser});
-    } catch (error) {
-        res.status(400).json(error);
-    }
-});
+userRouter.post('', UserController.postUser);
 
 export default userRouter;

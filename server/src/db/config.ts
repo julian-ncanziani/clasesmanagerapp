@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
 //models
-import { User } from '../models/user';
+import {User}  from '../models/user';
 import { Student } from '../models/student';
 import { Class } from '../models/class';
 
