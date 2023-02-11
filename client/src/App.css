@@ -1,38 +1,55 @@
-.App {
+#navBar{
+  background-color: rgba(8, 106, 172, 0.918);
+  width: 100%;
+  margin-top: 0;
   text-align: center;
+  height: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#titulo{
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#loginForm{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: auto;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.App-link {
-  color: #61dafb;
+#loginForm > h2{
+  text-align: center;
+  font-family: cursive;
+  color: rgba(0, 47, 85, 0.856);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#loginForm > span{
+  display: inherit;
+  margin-top: 10px;
+}
+
+#loginForm > span > p{
+  width: 30%;
+  height: auto;
+  margin: 0;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#loginForm > span > input{
+  margin-top: auto auto auto auto;
+  height: 20px;
+  width: 100%;
+  font-size: large;
+}
+
+#loginForm >  button{
+  width: 20%;
+  height: auto;
+  margin: 20px auto auto auto;
+  font-size: larger;
 }

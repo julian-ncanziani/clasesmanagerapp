@@ -9,7 +9,7 @@ const app = express();
 app.use(json());
 app.use(urlencoded({extended: true}));
 app.use(router);
-connection.sync({force: true}).then(()=>{
+connection.sync({force: false}).then(()=>{
         app.listen(3001);
         console.log('Server running on port 3001');
     }).catch((err)=>{
