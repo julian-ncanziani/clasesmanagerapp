@@ -1,1 +1,11 @@
-crear usuario ok
+crear usuario ->ok
+reducer:
+
+
+validaciones:
+autenticacion de usuario usuario y sus datos
+
+paginas:
+login -> ok
+crear usuario -> ok
+usuario

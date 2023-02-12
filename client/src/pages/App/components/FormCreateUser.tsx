@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+import './FormCreateUser.css';
 type user = {
     name:string,
     password: string,
@@ -30,6 +31,7 @@ function FormCreateUser(){
     };
 
     return(<>
+    <Link to='/' id='backLink'>Back</Link>
     <div id='loginForm'>
         <h2>Create User</h2>
         <span>

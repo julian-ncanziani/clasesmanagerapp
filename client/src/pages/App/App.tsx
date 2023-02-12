@@ -3,6 +3,8 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 //components
 import Login from './components/login';
 import FormCreateUser from './components/FormCreateUser';
+import HomeUser from '../HomeUser/HomeUser';
+
 
 const router = createBrowserRouter([
   {
@@ -12,6 +14,9 @@ const router = createBrowserRouter([
   {
     path: '/create',
     element: <FormCreateUser/>
+  },{
+    path: '/home',
+    element: <HomeUser/>
   }
 ]);
 
